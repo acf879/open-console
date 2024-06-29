@@ -1,0 +1,22 @@
+# Copyright (c) 2021 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  group-filter: [+optional]
+  self:
+    west-commands: scripts/west-commands.yml
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      
+      # Update to v3.7.0-rc1 on June 17 2024
+      revision: 66630961627f4d8625e2dbe1cb7afe4abd690b2e 
+      import:
+        name-allowlist:
+          - hal_espressif 
+          - mcuboot
