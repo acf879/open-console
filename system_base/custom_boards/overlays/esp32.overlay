@@ -1,3 +1,31 @@
 / {
+    msc_disk0 {
+        compatible = "zephyr,flash-disk";
+        partition = <&storage_partition>;
+        disk-name = "NAND";
+        cache-size = <4096>;
+    };
+};
 
+// EVENTUALLY WILL USE MULTIWIRE TRANSFER RATHER THAN 1 WIRE SPI
+//&sdhc0 { 
+//    status = "okay";
+//    pinctrl-0 = <&GPIO0 4 GPIO_ACTIVE_HIGH>;
+//};
+
+&spi2 {
+    status = "okay";
+    cs-gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
+    //sdhc0: sdhc@0 { // defined as a part of the SDMMC (SDIO BUS) 
+                    //for faster data transfer 
+    sdCard0: sdCard@0 {
+        compatible = "zephyr,sdhc-spi-slot";
+        reg = <0>;
+        status = "okay";
+        mmc {
+            compatible = "zephyr,sdmmc-disc";
+            status = "okay";
+        };
+        spi-max-frequency = <24000000>;
+    };
 };
