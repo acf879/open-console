@@ -14,8 +14,8 @@ manifest:
     - name: zephyr
       remote: zephyrproject-rtos
       
-      # Update to v3.7.0-rc1 on June 17 2024
-      revision: 66630961627f4d8625e2dbe1cb7afe4abd690b2e 
+      # Update to v3.7.0-rc2 on July 5 2024
+      revision: 7a10c7dff10f5dd1bd247a89c24b5756731b49ae 
       import:
         name-allowlist:
           - hal_espressif 

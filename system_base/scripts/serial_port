@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $1 = 'esp32' ] 2>/dev/null
+then
+    minicom -D /dev/ttyUSB0
+elif [ $1 = 'esp32s3' ] 2>/dev/null
+then
+    minicom -D /dev/ttyACM0
+else
+    echo Inputed is not from possible board selections. Please choose from 'esp32' or 'esp32s3'
+fi
