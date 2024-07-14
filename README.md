@@ -1,3 +1,7 @@
+# About Open-Console
+
+# Building Basic System
+
 # Open-Console Setup
 ## Ubuntu specific setup
 - Step 1 -- Upgrade and update package manager
