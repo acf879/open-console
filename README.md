@@ -1,6 +1,21 @@
 # About Open-Console
+Open-Console is exactly what it sounds like. An open-source community built console to allow the creation of games for consoles rather than just PCs. This project is inspired by older consoles and games that required extreme control over all systems due to the limited resources. This console however should have many more resources available but allows the user to have access to everything for the console. The RTOS system for the console is built on Zephyr RTOS which is a board agnostic RTOS so multiple designs for the console for several boards can exist simultaniously allowing flexibility for the developer.
+
+# Guidelines
+To keep the system as bug free as possible with the community the flags -Wall will be used to discover more errors. -Wextra, -Werror and -pendantic would be a great addition but as zephyr does not cleanly compile it will produce a bunch of warnings regardless of the systems clean code.
 
 # Building Basic System
+In the repositry the system_base folder is the folder to create the base of the system with the games being compiled in seperate folders.
+In the system_base folder a Makefile exists to allow for ease of compiling the system rather than having to type out the west build commands.
+
+```
+cd system_base
+```
+
+In the Makefile several make options are available currently such as clean, console_sys, flash, menu, ram_report, rom_report and sysbuild_esp32. Clean deletes the build directory, console_sys builds the consoles main system, flash flashes the device, ram_report shows the ram usage, rom report the rom usage and sysbuild_esp32 builds the bootloader for mcuboot. Currently the esp32 devkitc wroom is the only board on the Makefile but the esp32s3 board will be added soon.
+
+## What is planned to be implemented shortly
+Currently there are plans on getting a micro usb connected with the board to act as long term storage to store games, adding a watchdog timer, adding a physics engine and showing a basic message on a monitor (currently there are plans only for hdmi but it would be nice to have display port be supported)
 
 # Open-Console Setup
 ## Ubuntu specific setup
