@@ -2,7 +2,8 @@
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 
-#include "helper_functions.h"
+
+// Does not need to reference anything just needs to be linked
 #include "terminal.h"
 
 int main() {

@@ -9,24 +9,24 @@
 extern uint32_t delta_time_us;
 
 static inline void help_terminal_cmd(const struct shell* shell_cmd, size_t argc, char** argv) {
-    shell_fprintf(shell_cmd, SHELL_VT100_COLOR_MAGENTA, 
-            "Help List for Custom Console              \n"
-            "------------------------------------------\n"
-            "help           - provides a help list     \n"
-            "set_delta_time - sets time step in us     \n"
-            "get_delta_time - gets time step in us     \n"
+    shell_print(shell_cmd, 
+            "Help List for Custom Console         \n"
+            "-------------------------------------\n"
+            "help           - provides a help list\n"
+            "set_delta_time - sets time step in us\n"
+            "get_delta_time - gets time step in us\n"
             );
     return;
 }
 
 static inline void set_delta_time_terminal_cmd(const struct shell* shell_cmd, size_t argc, char** argv) {
-    shell_fprintf(shell_cmd, SHELL_VT100_COLOR_MAGENTA, "Delta time set to: %s us\n", argv[1]);
+    shell_print(shell_cmd, "Delta time set to: %s us", argv[1]);
     delta_time_us = atoi(argv[1]);
     return;
 }
 
 static inline void get_delta_time_terminal_cmd(const struct shell* shell_cmd, size_t argc, char** argv) {
-    shell_fprintf(shell_cmd, SHELL_VT100_COLOR_MAGENTA, "Delta time is: %u us\n", delta_time_us);
+    shell_print(shell_cmd, "Delta time is: %u us", delta_time_us);
     return;
 }
 
