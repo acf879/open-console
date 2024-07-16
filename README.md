@@ -12,7 +12,10 @@ In the system_base folder a Makefile exists to allow for ease of compiling the s
 cd system_base
 ```
 
-In the Makefile several make options are available currently such as clean, console_sys, flash, menu, ram_report, rom_report and sysbuild_esp32. Clean deletes the build directory, console_sys builds the consoles main system, flash flashes the device, ram_report shows the ram usage, rom report the rom usage and sysbuild_esp32 builds the bootloader for mcuboot. Currently the esp32 devkitc wroom is the only board on the Makefile but the esp32s3 board will be added soon.
+In the Makefile several make options are available currently such as clean, base_esp32, base_esp32s3, flash, menu, ram_report, rom_report, monitor_esp32, monitor_esp32s3 sysbuild_esp32 and sysbuild_esp32s3. Clean deletes the build directory, base_* builds the consoles main system, flash flashes the device, ram_report shows the ram usage, rom report the rom usage and sysbuild_* builds the bootloader for mcuboot and monitor_* monitors the connection through minicom 
+
+>[!TIP]
+>West can be used for a serial connection instead of minicom as well
 
 ## What is planned to be implemented shortly
 Currently there are plans on getting a micro usb connected with the board to act as long term storage to store games, adding a watchdog timer, adding a physics engine and showing a basic message on a monitor (currently there are plans only for hdmi but it would be nice to have display port be supported)
