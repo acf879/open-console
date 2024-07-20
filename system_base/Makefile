@@ -46,3 +46,6 @@ monitor_esp32:
 
 monitor_esp32s3:
 	./scripts/serial_port esp32s3
+
+generate_documentation:
+	cd doc && ./scripts/generate_doc && cd ..

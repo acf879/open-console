@@ -1,0 +1,11 @@
+#!/bin/bash
+# This is to be called from the docs directory using ./scripts/generate_doc
+
+doxygen Doxyfile                    # exit curr dir
+
+# IF LATEX FILE IS WANTED, UNCOMMENT THE FOLLOWING CODE. CURRENTLY IT HAS SOME WARNINGS
+
+#cd latex && make pdf                # enter and build .pdf
+#mv refman.pdf ../system_base.pdf    # move pdf to parent dir
+#cd ..                               # exit to parent dir
+#rm -rf latex                        # remove files
