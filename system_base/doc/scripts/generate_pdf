@@ -1,0 +1,8 @@
+#!/bin/bash
+# This is to be called from the docs directory using ./scripts/generate_pdf
+
+doxygen _doxygen                    # exit curr dir
+cd latex && make pdf                # enter and build .pdf
+mv refman.pdf ../system_base.pdf    # move pdf to parent dir
+cd ..                               # exit to parent dir
+rm -rf latex html                   # remove files

@@ -1,0 +1,18 @@
+/**
+ * @defgroup drivers Custom driver classes
+ * @{
+ *
+ * @brief Custom driver classes
+ *
+ * @}
+ */
+
+/**
+ * @defgroup lib Custom libraries
+ * @{
+ *
+ * @brief Custom libraries
+ *
+ * @}
+ */
+
