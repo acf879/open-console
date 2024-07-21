@@ -49,3 +49,6 @@ monitor_esp32s3:
 
 generate_documentation:
 	cd doc && ./scripts/generate_doc && cd ..
+
+install_document_dependencies:
+	cd doc && pip3 install -r ./requirements.txt && cd ..
