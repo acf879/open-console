@@ -20,7 +20,7 @@
  *                      forward return 0 otherwise return ERR 
  *                      value indicating result
  */
-Bounds_Error_Check move_constant_forwards(Global_Position position, const unsigned int x_amount);
+Bounds_Error_Check move_constant_forwards(Global_Position position, const unsigned int x_amount, Bounds_Error_Check bounds);
 
 /**
  * @brief           Move backwards with constant speed
@@ -31,7 +31,7 @@ Bounds_Error_Check move_constant_forwards(Global_Position position, const unsign
  *                      backwards return 0 otherwise return ERR 
  *                      value indicating result
  */
-Bounds_Error_Check move_constant_backwards(Global_Position position, const unsigned int x_amount);
+Bounds_Error_Check move_constant_backwards(Global_Position position, const unsigned int x_amount, Bounds_Error_Check bounds);
 
 /**
  * @brief           Move upwards with constant speed
@@ -42,7 +42,7 @@ Bounds_Error_Check move_constant_backwards(Global_Position position, const unsig
  *                      upwards return 0 otherwise return ERR 
  *                      value indicating result
  */
-Bounds_Error_Check move_constant_upwards(Global_Position position, const unsigned int z_amount);
+Bounds_Error_Check move_constant_upwards(Global_Position position, const unsigned int z_amount, Bounds_Error_Check bounds);
 
 /**
  * @brief           Move downwards with constant speed
@@ -53,7 +53,7 @@ Bounds_Error_Check move_constant_upwards(Global_Position position, const unsigne
  *                      downwards return 0 otherwise return ERR 
  *                      value indicating result
  */
-Bounds_Error_Check move_constant_downwards(Global_Position position, const unsigned int z_amount);
+Bounds_Error_Check move_constant_downwards(Global_Position position, const unsigned int z_amount, Bounds_Error_Check bounds);
 
 /**  
  * @brief           Move leftwards with constant speed
@@ -64,7 +64,7 @@ Bounds_Error_Check move_constant_downwards(Global_Position position, const unsig
  *                      left return 0 otherwise return ERR 
  *                      value indicating result
  */
-Bounds_Error_Check move_constant_leftwards(Global_Position position, const unsigned int y_amount);
+Bounds_Error_Check move_constant_leftwards(Global_Position position, const unsigned int y_amount, Bounds_Error_Check bounds);
 
 /**
  * @brief           Move in the direction of the vector and at the speed of the vector

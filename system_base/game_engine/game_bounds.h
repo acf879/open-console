@@ -10,6 +10,14 @@
 
 #include <stdbool.h>
 
+#define MIN_X_BOUND 0
+#define MIN_Y_BOUND 0
+#define MIN_Z_BOUND 0
+
+#define MAX_X_BOUND 65535 
+#define MAX_Y_BOUND 65535
+#define MAX_Z_BOUND 65535
+
 /**
  * @brief A projection of the vector on a global axis
  * @param Global_Position_Axis_Projection An unsigned int that is a projection of a vector on a global axis for a part of the global vector
