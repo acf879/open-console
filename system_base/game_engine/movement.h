@@ -1,7 +1,7 @@
 /** 
  * @file            movement.h
  * @author          Ashton Fritz
- * @version         0.1
+ * @version         0.2
  * @date            Jul 20 2024
  */
 
@@ -17,8 +17,6 @@
  * @param           x_amount x units
  * @param           position global position for game
  * @result          If the object successfully moved x units 
- *                      forward return 0 otherwise return ERR 
- *                      value indicating result
  */
 Bounds_Error_Check move_constant_forwards(Global_Position position, const unsigned int x_amount, Bounds_Error_Check bounds);
 
@@ -28,8 +26,6 @@ Bounds_Error_Check move_constant_forwards(Global_Position position, const unsign
  * @param           x_amount x units
  * @param           position global position for game 
  * @result          If the object successfully moved x units 
- *                      backwards return 0 otherwise return ERR 
- *                      value indicating result
  */
 Bounds_Error_Check move_constant_backwards(Global_Position position, const unsigned int x_amount, Bounds_Error_Check bounds);
 
@@ -39,8 +35,6 @@ Bounds_Error_Check move_constant_backwards(Global_Position position, const unsig
  * @param           z_amount z units
  * @param           position global position for game 
  * @result          If the object successfully moved z units 
- *                      upwards return 0 otherwise return ERR 
- *                      value indicating result
  */
 Bounds_Error_Check move_constant_upwards(Global_Position position, const unsigned int z_amount, Bounds_Error_Check bounds);
 
@@ -50,8 +44,6 @@ Bounds_Error_Check move_constant_upwards(Global_Position position, const unsigne
  * @param           z_amount z units
  * @param           position global position for game 
  * @result          If the object successfully moved z units 
- *                      downwards return 0 otherwise return ERR 
- *                      value indicating result
  */
 Bounds_Error_Check move_constant_downwards(Global_Position position, const unsigned int z_amount, Bounds_Error_Check bounds);
 
@@ -61,8 +53,6 @@ Bounds_Error_Check move_constant_downwards(Global_Position position, const unsig
  * @param           y_amount y units
  * @param           position global position for game 
  * @result          If the object successfully moved y units 
- *                      left return 0 otherwise return ERR 
- *                      value indicating result
  */
 Bounds_Error_Check move_constant_leftwards(Global_Position position, const unsigned int y_amount, Bounds_Error_Check bounds);
 
@@ -71,9 +61,15 @@ Bounds_Error_Check move_constant_leftwards(Global_Position position, const unsig
  * @details         Move the object in the direction of the vector 
  * @param           vector A movement vector to move towards
  * @param           position global position for game 
- * @result          If the object successfully moved towards the vector. Return 0 
- *                      indicates success and ERR indicating failure
+ * @result          If the object successfully moved towards the vector 
  */
 Bounds_Error_Check move_constant(Global_Position position, const Position vector);
 
+/**
+ * @brief           Set global position to new global position 
+ * @details         Teleport object to new global position
+ * @param           global position vector
+ * @param           new global position vectore 
+ * @result          If the object successfully was moved to new global position*/
+Bounds_Error_Check set_global_position(Global_Position position, const Global_Position new_position);
 #endif

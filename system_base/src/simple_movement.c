@@ -102,3 +102,23 @@ Bounds_Error_Check move_constant(Global_Position position, const Position vector
 
     return bounds; 
 }
+
+Bounds_Error_Check set_global_position(Global_Position position, const Global_Position new_position) {
+  Bounds_Error_Check check;
+  if (position.global_y_position > MAX_Y_BOUND) { 
+    check.y_bounds = OUT_OF_BOUNDS_POSITIVE;
+  } else if (position.global_y_position < MIN_Y_BOUND) {
+    check.y_bounds = OUT_OF_BOUNDS_NEGATIVE;
+  }
+  if (position.global_z_position > MAX_Z_BOUND) {
+    check.z_bounds = OUT_OF_BOUNDS_NEGATIVE;
+  } else if (position.global_z_position < MIN_Z_BOUND) {
+    check.z_bounds = OUT_OF_BOUNDS_POSITIVE;
+  }
+  if (position.global_x_position > MAX_X_BOUND) {
+    check.x_bounds = OUT_OF_BOUNDS_NEGATIVE;
+  } else if (position.global_x_position < MIN_X_BOUND) {
+    check.x_bounds = OUT_OF_BOUNDS_POSITIVE;
+  }
+  return check;  
+}
